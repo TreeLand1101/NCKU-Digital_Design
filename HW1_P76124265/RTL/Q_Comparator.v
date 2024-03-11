@@ -4,7 +4,7 @@
 module Q_Comparator(
     input signed [4:0] Din,
     input signed [4:0] Q,
-    output [1:0] Tmp,
+    output reg [1:0] Tmp
 );
 
 /*Write your design here*/

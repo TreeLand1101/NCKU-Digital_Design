@@ -5,7 +5,7 @@ module ALU(
     input signed [4:0] Din1,
     input signed [4:0] Din2,
     input [1:0] Sel,
-    output signed [4:0] Tmp,
+    output reg signed [4:0] Tmp
 );
 
 /*Write your design here*/

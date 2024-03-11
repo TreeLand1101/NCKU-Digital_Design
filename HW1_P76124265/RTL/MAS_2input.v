@@ -16,16 +16,15 @@ module MAS_2input(
 );
 
 /*Write your design here*/
-wire signed w1 [4:0];
-wire w2 [1:0];
+wire signed [4:0] w1;
+wire [1:0] w2;
+wire [4:0] w3;
 
-always @(Sel or Din1 or Din2 or Q)
-begin
-    ALU(.Din1(Din1), .Din2(Din2), .Sel(Sel), .Tmp(w1));
-    TDout = w1;
-    Q_Comparator(.Din(w1), .Q(Q), .Tmp(w2));
-    Tcmp = w2;
-    ALU(.Din1(w1), .Din2(Q), .Sel(w2), .Tmp(Dout));
-end
+ALU ALU_inst(.Din1(Din1), .Din2(Din2), .Sel(Sel), .Tmp(w1));
+assign TDout = w1;
+Q_Comparator Q_Comparator_instQ_Comparator(.Din(w1), .Q(Q), .Tmp(w2));
+assign Tcmp = w2;
+ALU ALU_inst2(.Din1(w1), .Din2(Q), .Sel(w2), .Tmp(w3));
+assign Dout = w3[3:0];
 
 endmodule
