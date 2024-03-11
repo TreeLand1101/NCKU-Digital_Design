@@ -1,0 +1,24 @@
+C:/Users/p7612/Desktop/Digital_IC_Design/HW1_P76124265/RTL/tb.v {1 {vlog -work work -stats=none C:/Users/p7612/Desktop/Digital_IC_Design/HW1_P76124265/RTL/tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}} C:/Users/p7612/Desktop/Digital_IC_Design/HW1_P76124265/RTL/MAS_2input.v {0 {vlog -work work -stats=none C:/Users/p7612/Desktop/Digital_IC_Design/HW1_P76124265/RTL/MAS_2input.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU
+** Error: (vlog-13038) ** while parsing file included at C:/Users/p7612/Desktop/Digital_IC_Design/HW1_P76124265/RTL/MAS_2input.v(4)
+** at C:\Users\p7612\Desktop\Digital_IC_Design\HW1_P76124265\RTL\ALU.v(9): near ")": Missing port in ansi port list.
+
+} {4.0 5.0} {}} C:/Users/p7612/Desktop/Digital_IC_Design/HW1_P76124265/RTL/ALU.v {0 {vlog -work work -stats=none C:/Users/p7612/Desktop/Digital_IC_Design/HW1_P76124265/RTL/ALU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU
+** Error: (vlog-13038) C:/Users/p7612/Desktop/Digital_IC_Design/HW1_P76124265/RTL/ALU.v(9): near ")": Missing port in ansi port list.
+
+} {4.0 5.0} {}} C:/Users/p7612/Desktop/Digital_IC_Design/HW1_P76124265/RTL/Q_Comparator.v {0 {vlog -work work -stats=none C:/Users/p7612/Desktop/Digital_IC_Design/HW1_P76124265/RTL/Q_Comparator.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Q_Comparator
+** Error: (vlog-13038) C:/Users/p7612/Desktop/Digital_IC_Design/HW1_P76124265/RTL/Q_Comparator.v(8): near ")": Missing port in ansi port list.
+
+} {4.0 5.0} {}}

@@ -1,0 +1,5 @@
+# Compile of ALU.v failed with 1 errors.
+# Compile of MAS_2input.v failed with 1 errors.
+# Compile of Q_Comparator.v failed with 1 errors.
+# Compile of tb.v was successful.
+# 4 compiles, 3 failed with 3 errors.
