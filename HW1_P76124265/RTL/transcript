@@ -3634,3 +3634,5 @@ run -all
 #    Time: 3007500 ps  Iteration: 1  Instance: /test
 # 1
 # Break in Module test at C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/tb.v line 163
+# End time: 18:21:10 on Mar 12,2024, Elapsed time: 0:20:56
+# Errors: 0, Warnings: 1
