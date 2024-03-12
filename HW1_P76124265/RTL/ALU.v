@@ -12,9 +12,9 @@ module ALU(
 
 always @(Din1 or Din2 or Sel)
 begin
-    if (Sel == 4'b00)
+    if (Sel == 2'b00)
         Tmp = Din1 + Din2;
-    else if (Sel == 4'b11)
+    else if (Sel == 2'b11)
         Tmp = Din1 - Din2;
     else
         Tmp = Din1;

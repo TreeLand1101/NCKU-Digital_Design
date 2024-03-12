@@ -1,0 +1,106 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1/modelsim_ase/win32aloem
+vALU
+Z0 !s110 1710237603
+!i10b 1
+!s100 LDcWQ9hCc^hHBiC_ZVF^`1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IKb15CMV5O7kfLPSh_UmOL1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL
+w1710236871
+8ALU.v
+FALU.v
+!i122 21
+L0 4 20
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1710237603.000000
+Z6 !s107 Q_Comparator.v|ALU.v|C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/MAS_2input.v|
+Z7 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/MAS_2input.v|
+!i113 1
+Z8 o-work work
+Z9 tCvgOpt 0
+n@a@l@u
+vMAS_2input
+R0
+!i10b 1
+!s100 AWXTX>zTb`2I<N[S4k9V51
+R1
+IID=?2k`TV:J?ZG<e=_VzK0
+R2
+R3
+Z10 w1710236396
+8C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/MAS_2input.v
+FC:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/MAS_2input.v
+!i122 21
+L0 8 23
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+n@m@a@s_2input
+vQ_Comparator
+R0
+!i10b 1
+!s100 ka4B:S?1i@Ln@CV]M`THX3
+R1
+IBk8<]<=d[mXHb]oTi<idA1
+R2
+R3
+w1710237599
+8C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/Q_Comparator.v
+FC:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/Q_Comparator.v
+!i122 22
+L0 4 13
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/Q_Comparator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/Q_Comparator.v|
+!i113 1
+R8
+R9
+n@q_@comparator
+vtest
+!s110 1710237604
+!i10b 1
+!s100 `1?l1L2M7M7ToDMgP]D9o1
+R1
+IJ@_ZZZRhD2WgzeB<oUOfQ2
+R2
+R3
+R10
+8C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/tb.v
+FC:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/tb.v
+!i122 23
+L0 2 166
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/tb.v|
+!i113 1
+R8
+R9
