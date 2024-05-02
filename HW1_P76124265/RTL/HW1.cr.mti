@@ -1,4 +1,18 @@
-C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/MAS_2input.v {1 {vlog -work work -stats=none C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/MAS_2input.v
+E:/NCKU-Digital_IC_Design/HW1_P76124265/RTL/Q_Comparator.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW1_P76124265/RTL/Q_Comparator.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Q_Comparator
+
+Top level modules:
+	Q_Comparator
+
+} {} {}} E:/NCKU-Digital_IC_Design/HW1_P76124265/RTL/tb.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW1_P76124265/RTL/tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}} E:/NCKU-Digital_IC_Design/HW1_P76124265/RTL/MAS_2input.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW1_P76124265/RTL/MAS_2input.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module ALU
 -- Compiling module Q_Comparator
@@ -7,25 +21,11 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	MAS_2input
 
-} {} {}} C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/tb.v {1 {vlog -work work -stats=none C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/tb.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module test
-
-Top level modules:
-	test
-
-} {} {}} C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/ALU.v {1 {vlog -work work -stats=none C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/ALU.v
+} {} {}} E:/NCKU-Digital_IC_Design/HW1_P76124265/RTL/ALU.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW1_P76124265/RTL/ALU.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module ALU
 
 Top level modules:
 	ALU
-
-} {} {}} C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/Q_Comparator.v {1 {vlog -work work -stats=none C:/Users/p7612/Desktop/NCKU_Digital_IC_Design/HW1_P76124265/RTL/Q_Comparator.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module Q_Comparator
-
-Top level modules:
-	Q_Comparator
 
 } {} {}}
