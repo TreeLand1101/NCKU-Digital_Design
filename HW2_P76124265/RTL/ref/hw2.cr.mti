@@ -1,15 +1,15 @@
-E:/NCKU-Digital_IC_Design/HW2_P76124265/RTL/ref/CIPU.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW2_P76124265/RTL/ref/CIPU.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module CIPU
-
-Top level modules:
-	CIPU
-
-} {} {}} E:/NCKU-Digital_IC_Design/HW2_P76124265/RTL/ref/tb.sv {1 {vlog -work work -sv -stats=none E:/NCKU-Digital_IC_Design/HW2_P76124265/RTL/ref/tb.sv
+E:/NCKU-Digital_IC_Design/HW2_P76124265/RTL/ref/tb.sv {1 {vlog -work work -sv -stats=none E:/NCKU-Digital_IC_Design/HW2_P76124265/RTL/ref/tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module textfixture
 
 Top level modules:
 	textfixture
+
+} {} {}} E:/NCKU-Digital_IC_Design/HW2_P76124265/RTL/ref/CIPU.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW2_P76124265/RTL/ref/CIPU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module CIPU
+
+Top level modules:
+	CIPU
 
 } {} {}}

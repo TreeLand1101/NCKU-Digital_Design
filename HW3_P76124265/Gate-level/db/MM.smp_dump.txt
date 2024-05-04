@@ -1,0 +1,9 @@
+
+State Machine - |MM|Current_State
+Name Current_State.Done Current_State.Illegal Current_State.Clear Current_State.Mat_Mul Current_State.Load_Mat2 Current_State.Load_Mat1 
+Current_State.Load_Mat1 0 0 0 0 0 0 
+Current_State.Load_Mat2 0 0 0 0 1 1 
+Current_State.Mat_Mul 0 0 0 1 0 1 
+Current_State.Clear 0 0 1 0 0 1 
+Current_State.Illegal 0 1 0 0 0 1 
+Current_State.Done 1 0 0 0 0 1 
