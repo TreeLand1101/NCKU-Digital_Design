@@ -10,72 +10,72 @@ z2
 cModel Technology
 dE:/NCKU-Digital_IC_Design/HW2_P76124265/RTL/ref
 vhard_block
-Z0 !s110 1714830904
+!s110 1715149948
 !i10b 1
-!s100 8B3jd03hAAilC@<NhX_BQ0
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IOTFoWC=32^jFkh4TCk`:10
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dE:/NCKU-Digital_IC_Design/HW3_P76124265/RTL
-Z4 w1714829018
-Z5 8E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.vo
-Z6 FE:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.vo
-!i122 71
-L0 14583 34
-Z7 OV;L;2020.1;71
+!s100 ClRY2KEcJJm053:FP]oKT3
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IC@FB1gMkMb4UdaEWm4T6h1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL
+w1715149842
+8E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.vo
+FE:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.vo
+!i122 79
+L0 14151 34
+Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1714830904.000000
-!s107 E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.vo|
-Z9 !s90 -reportprogress|300|-work|work|-stats=none|E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.vo|
+!s108 1715149947.000000
+!s107 E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.vo|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.vo|
 !i113 1
-Z10 o-work work
-Z11 tCvgOpt 0
+Z4 o-work work
+Z5 tCvgOpt 0
 vMM
-R0
+Z6 !s110 1715151127
 !i10b 1
-!s100 Sn60bo5E=;_`A_`zTN4hH3
+!s100 1MfAPnYEYJ<[=h14D44z_1
+R0
+Ig5Ec44SC4MlEQj>4hHc0h3
 R1
-Ig9:l<BaX9zOJ5TW^0IjYP0
 R2
+w1715149769
+8E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v
+FE:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v
+!i122 81
+L0 6 244
 R3
+r1
+!s85 0
+31
+Z7 !s108 1715151127.000000
+!s107 E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v|
+!i113 1
 R4
 R5
-R6
-!i122 71
-L0 32 14550
-R7
-r1
-!s85 0
-31
-R8
-Z12 !s107 E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.vo|
-R9
-!i113 1
-R10
-R11
 n@m@m
 vtestfixture1
-!s110 1714830903
+R6
 !i10b 1
 !s100 cKQMMn7<zb0mkGY:jRV<E3
+R0
+IUceG9BYYK`5N34>3Df]2n1
 R1
-I2Ho2lh]K>mR>k`8b:;HZU0
 R2
-R3
-w1714825772
-8E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v
-FE:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v
-!i122 70
+w1715134692
+8E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v
+FE:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v
+!i122 80
 L0 7 370
-R7
+R3
 r1
 !s85 0
 31
-!s108 1714830903.000000
-!s107 E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v|
-!s90 -reportprogress|300|-work|work|-stats=none|E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v|
+R7
+!s107 E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v|
 !i113 1
-R10
-R11
+R4
+R5
