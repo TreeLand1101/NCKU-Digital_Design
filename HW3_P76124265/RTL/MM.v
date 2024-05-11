@@ -26,6 +26,8 @@ reg [2:0] Mat1_Row, Mat1_Col, Mat1_Cur_Row, Mat1_Cur_Col;
 reg signed [7:0] Mat2[3:0][3:0];
 reg [2:0] Mat2_Row, Mat2_Col, Mat2_Cur_Row, Mat2_Cur_Col;
 
+reg [2:0] i;
+
 // State Register
 always @(posedge clk or posedge rst) 
 begin
@@ -58,12 +60,10 @@ begin
         end
      
         Mat_Mul: begin
-            if ((Mat1_Cur_Row == Mat1_Row - 1) && (Mat1_Cur_Col == Mat1_Col - 1) && (Mat2_Cur_Row == Mat2_Row - 1) && (Mat2_Cur_Col == Mat2_Col - 1))
+            if ((Mat1_Cur_Row == Mat1_Row - 1) && (Mat2_Cur_Col == Mat2_Col - 1))
                 Next_State <= Done;
-            else if (Mat1_Cur_Col == Mat1_Col - 1)
-                Next_State <= Wating;
             else
-                Next_State <= Mat_Mul;
+                Next_State <= Wating;
         end
 
         Wating: begin
@@ -106,26 +106,22 @@ always @(posedge clk or posedge rst) begin
                 if (row_end)
                     busy <= 1;
                 else
-                    busy <= 0;            
+                    busy <= 0;
             end
-            Mat_Mul: begin
-                out_data <= out_data + Mat1[Mat1_Cur_Row][Mat1_Cur_Col] * Mat2[Mat2_Cur_Row][Mat2_Cur_Col];
 
-                if ((Mat2_Cur_Row == Mat2_Row - 1) && (Mat2_Cur_Col == Mat2_Col - 1))
+            Mat_Mul: begin
+                for (i = 0; i < Mat1_Col; i = i + 1)
+                    out_data <= out_data + Mat1[Mat1_Cur_Row][i] * Mat2[i][Mat2_Cur_Col];
+                
+                if (Mat2_Cur_Col == Mat2_Col - 1)
                     change_row <= 1;
                 else
                     change_row <= 0;
-
-                if ((Mat1_Cur_Col == Mat1_Col - 1) && (Mat2_Cur_Row == Mat2_Row - 1)) begin
-                    is_legal <= 1;
-                    valid <= 1;
-                end
-                else begin
-                    is_legal <= 0;
-                    valid <= 0;
-                end
-
+                is_legal <= 1;
+                valid <= 1;
+                busy <= 1;
             end
+
             Wating: begin
                 out_data <= 0;
                 is_legal <= 0;
@@ -198,33 +194,16 @@ always @(posedge clk or posedge rst) begin
             end
 
             Mat_Mul: begin
-                // Mat1_Cur_Row
-                if ((Mat2_Cur_Row == Mat2_Row - 1) && (Mat2_Cur_Col == Mat2_Col - 1))
+                if (Mat2_Cur_Col == Mat2_Col - 1) begin
                     Mat1_Cur_Row <= Mat1_Cur_Row + 1;
-
-                // Mat1_Cur_Col
-                if (Mat1_Cur_Col == Mat1_Col - 1)
-                    Mat1_Cur_Col <= 0;
-                else
-                    Mat1_Cur_Col <= Mat1_Cur_Col + 1;
-
-                // Mat2_Cur_Row
-                if (Mat2_Cur_Row == Mat2_Row - 1)
-                    Mat2_Cur_Row <= 0;
-                else
-                    Mat2_Cur_Row <= Mat2_Cur_Row + 1;
-
-                // Mat2_Cur_Col
-                if ((Mat1_Cur_Col == Mat1_Col - 1) && (Mat2_Cur_Row == Mat2_Row - 1)) begin                  
-                    if (Mat2_Cur_Col == Mat2_Col - 1)
-                        Mat2_Cur_Col <= 0;
-                    else
-                        Mat2_Cur_Col <= Mat2_Cur_Col + 1;
+                    Mat2_Cur_Col <= 0;
                 end
+                else
+                    Mat2_Cur_Col <= Mat2_Cur_Col + 1;
             end
 
             Wating: begin
-
+                
             end
 
             Illegal: begin

@@ -100,6 +100,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "col_end",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -109,10 +113,6 @@
 				},
 				{
 					"name" : "row_end",
-					"strict" : false
-				},
-				{
-					"name" : "col_end",
 					"strict" : false
 				},
 				{

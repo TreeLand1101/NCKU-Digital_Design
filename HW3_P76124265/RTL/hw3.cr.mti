@@ -1,11 +1,4 @@
-E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module testfixture1
-
-Top level modules:
-	testfixture1
-
-} {} {}} E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.vo {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.vo
+E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.vo {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.vo
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module MM
 -- Compiling module hard_block
@@ -13,18 +6,18 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	MM
 
-} {} {}} E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v
+} {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module testfixture1
 
 Top level modules:
 	testfixture1
 
-} {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v
+} {} {}} E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW3_P76124265/RTL/testfixture.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module MM
+-- Compiling module testfixture1
 
 Top level modules:
-	MM
+	testfixture1
 
 } {} {}}
