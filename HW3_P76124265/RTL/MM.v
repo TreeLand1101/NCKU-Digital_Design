@@ -3,19 +3,22 @@
 //
 
 `timescale 1ns/10ps
-module MM( in_data, col_end, row_end, is_legal, out_data, rst, clk , change_row,valid,busy);
-input           clk;
-input           rst;
-input           col_end;
-input           row_end;
-input      [7:0]     in_data;
+module MM(
+input           clk,
+input           rst,
+input           col_end,
+input           row_end,
+input      [7:0]     in_data,
 
-output reg signed [19:0]   out_data;
-output reg is_legal;
-output reg change_row,valid,busy;
+output reg signed [19:0]   out_data,
+output reg is_legal,
+output reg change_row,
+output reg valid,
+output reg busy
+);
 
 // State
-parameter [2:0] Load_Mat1 = 3'b000, Load_Mat2 = 3'b001, Mat_Mul = 3'b010, Wating = 3'b011, Illegal = 3'b100, Done = 3'b101;
+parameter [2:0] Load_Mat1 = 3'b000, Load_Mat2 = 3'b001, Mat_Mul = 3'b010, Validation = 3'b011, Done = 3'b100;
 reg [2:0] Current_State, Next_State;
 
 // Matrix 1
@@ -47,31 +50,23 @@ begin
         end
 
         Load_Mat2: begin
-            if (row_end) begin
-                if (Mat1_Col == Mat2_Row + 1) 
-                    Next_State <= Mat_Mul;
-                else
-                    Next_State <= Illegal;
-            end
+            if (row_end) 
+                Next_State <= Mat_Mul;
             else 
                 Next_State <= Load_Mat2;
         end
      
         Mat_Mul: begin
-            if ((Mat1_Cur_Row == Mat1_Row - 1) && (Mat1_Cur_Col == Mat1_Col - 1) && (Mat2_Cur_Row == Mat2_Row - 1) && (Mat2_Cur_Col == Mat2_Col - 1))
+            if ((Mat1_Col != Mat2_Row) || (Mat1_Cur_Row == Mat1_Row - 1) && (Mat1_Cur_Col == Mat1_Col - 1) && (Mat2_Cur_Row == Mat2_Row - 1) && (Mat2_Cur_Col == Mat2_Col - 1))
                 Next_State <= Done;
             else if (Mat1_Cur_Col == Mat1_Col - 1)
-                Next_State <= Wating;
+                Next_State <= Validation;
             else
                 Next_State <= Mat_Mul;
         end
 
-        Wating: begin
+        Validation: begin
             Next_State <= Mat_Mul;
-        end
-
-        Illegal: begin
-            Next_State <= Done;
         end
 
         Done: begin
@@ -109,36 +104,39 @@ always @(posedge clk or posedge rst) begin
                     busy <= 0;            
             end
             Mat_Mul: begin
-                out_data <= out_data + Mat1[Mat1_Cur_Row][Mat1_Cur_Col] * Mat2[Mat2_Cur_Row][Mat2_Cur_Col];
-
-                if ((Mat2_Cur_Row == Mat2_Row - 1) && (Mat2_Cur_Col == Mat2_Col - 1))
-                    change_row <= 1;
-                else
+                if (Mat1_Col != Mat2_Row) begin
+                    out_data <= 0;
+                    is_legal <= 0;
                     change_row <= 0;
-
-                if ((Mat1_Cur_Col == Mat1_Col - 1) && (Mat2_Cur_Row == Mat2_Row - 1)) begin
-                    is_legal <= 1;
                     valid <= 1;
+                    busy <= 0;
                 end
                 else begin
-                    is_legal <= 0;
-                    valid <= 0;
+                    out_data <= out_data + Mat1[Mat1_Cur_Row][Mat1_Cur_Col] * Mat2[Mat2_Cur_Row][Mat2_Cur_Col];
+
+                    if ((Mat2_Cur_Row == Mat2_Row - 1) && (Mat2_Cur_Col == Mat2_Col - 1))
+                        change_row <= 1;
+                    else
+                        change_row <= 0;
+
+                    if ((Mat1_Cur_Col == Mat1_Col - 1) && (Mat2_Cur_Row == Mat2_Row - 1)) begin
+                        is_legal <= 1;
+                        valid <= 1;
+                    end
+                    else begin
+                        is_legal <= 0;
+                        valid <= 0;
+                    end
+
                 end
 
             end
-            Wating: begin
+
+            Validation: begin
                 out_data <= 0;
                 is_legal <= 0;
                 change_row <= 0;
                 valid <= 0;
-                busy <= 0;             
-            end
-
-            Illegal: begin
-                out_data <= 0;
-                is_legal <= 0;
-                change_row <= 0;
-                valid <= 1;
                 busy <= 0;             
             end
 
@@ -149,6 +147,7 @@ always @(posedge clk or posedge rst) begin
                 valid <= 0;
                 busy <= 0;            
             end
+
         endcase
     end
 end
@@ -223,11 +222,7 @@ always @(posedge clk or posedge rst) begin
                 end
             end
 
-            Wating: begin
-
-            end
-
-            Illegal: begin
+            Validation: begin
 
             end
 

@@ -1,14 +1,14 @@
-Fitter Status : Successful - Fri May 10 21:39:58 2024
+Fitter Status : Successful - Mon May 13 19:03:11 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : MM
 Top-level Entity Name : MM
 Family : Cyclone IV E
 Device : EP4CE55F23A7
 Timing Models : Final
-Total logic elements : 519 / 55,856 ( < 1 % )
-    Total combinational functions : 395 / 55,856 ( < 1 % )
-    Dedicated logic registers : 321 / 55,856 ( < 1 % )
-Total registers : 321
+Total logic elements : 449 / 55,856 ( < 1 % )
+    Total combinational functions : 327 / 55,856 ( < 1 % )
+    Dedicated logic registers : 309 / 55,856 ( < 1 % )
+Total registers : 309
 Total pins : 36 / 325 ( 11 % )
 Total virtual pins : 0
 Total memory bits : 0 / 2,396,160 ( 0 % )

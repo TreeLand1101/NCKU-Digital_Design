@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MM
-Fri May 10 21:39:37 2024
+Mon May 13 19:02:51 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,19 +14,16 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
-  9. State Machine - |MM|cur
+  9. State Machine - |MM|Current_State
  10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Parameter Settings for User Entity Instance: Top-level Entity: |MM
- 14. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult2
- 15. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 16. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
- 17. lpm_mult Parameter Settings by Entity Instance
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
- 21. Analysis & Synthesis Suppressed Messages
+ 14. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 15. lpm_mult Parameter Settings by Entity Instance
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -53,15 +50,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 10 21:39:37 2024       ;
+; Analysis & Synthesis Status        ; Successful - Mon May 13 19:02:51 2024       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; MM                                          ;
 ; Top-level Entity Name              ; MM                                          ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 651                                         ;
-;     Total combinational functions  ; 395                                         ;
-;     Dedicated logic registers      ; 321                                         ;
-; Total registers                    ; 321                                         ;
+; Total logic elements               ; 583                                         ;
+;     Total combinational functions  ; 327                                         ;
+;     Dedicated logic registers      ; 309                                         ;
+; Total registers                    ; 309                                         ;
 ; Total pins                         ; 36                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -169,14 +166,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-12        ;   0.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -193,7 +183,6 @@ https://fpgasoftware.intel.com/eula.
 ; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc          ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc          ;         ;
 ; db/mult_73t.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_73t.tdf ;         ;
-; db/mult_j8t.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf ;         ;
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
 
 
@@ -202,20 +191,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 651       ;
+; Estimated Total logic elements              ; 583       ;
 ;                                             ;           ;
-; Total combinational functions               ; 395       ;
+; Total combinational functions               ; 327       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 266       ;
-;     -- 3 input functions                    ; 96        ;
-;     -- <=2 input functions                  ; 33        ;
+;     -- 4 input functions                    ; 231       ;
+;     -- 3 input functions                    ; 74        ;
+;     -- <=2 input functions                  ; 22        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 362       ;
-;     -- arithmetic mode                      ; 33        ;
+;     -- normal mode                          ; 308       ;
+;     -- arithmetic mode                      ; 19        ;
 ;                                             ;           ;
-; Total registers                             ; 321       ;
-;     -- Dedicated logic registers            ; 321       ;
+; Total registers                             ; 309       ;
+;     -- Dedicated logic registers            ; 309       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 36        ;
@@ -223,8 +212,8 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 1         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 321       ;
-; Total fan-out                               ; 2492      ;
+; Maximum fan-out                             ; 309       ;
+; Total fan-out                               ; 2234      ;
 ; Average fan-out                             ; 3.15      ;
 +---------------------------------------------+-----------+
 
@@ -234,13 +223,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name ; Library Name ;
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+-------------+--------------+
-; |MM                             ; 395 (367)           ; 321 (321)                 ; 0           ; 1            ; 1       ; 0         ; 36   ; 0            ; |MM                                        ; MM          ; work         ;
-;    |lpm_mult:Mult0|             ; 14 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MM|lpm_mult:Mult0                         ; lpm_mult    ; work         ;
-;       |mult_j8t:auto_generated| ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MM|lpm_mult:Mult0|mult_j8t:auto_generated ; mult_j8t    ; work         ;
-;    |lpm_mult:Mult1|             ; 14 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MM|lpm_mult:Mult1                         ; lpm_mult    ; work         ;
-;       |mult_j8t:auto_generated| ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MM|lpm_mult:Mult1|mult_j8t:auto_generated ; mult_j8t    ; work         ;
-;    |lpm_mult:Mult2|             ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |MM|lpm_mult:Mult2                         ; lpm_mult    ; work         ;
-;       |mult_73t:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |MM|lpm_mult:Mult2|mult_73t:auto_generated ; mult_73t    ; work         ;
+; |MM                             ; 327 (327)           ; 309 (309)                 ; 0           ; 1            ; 1       ; 0         ; 36   ; 0            ; |MM                                        ; MM          ; work         ;
+;    |lpm_mult:Mult0|             ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |MM|lpm_mult:Mult0                         ; lpm_mult    ; work         ;
+;       |mult_73t:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |MM|lpm_mult:Mult0|mult_73t:auto_generated ; mult_73t    ; work         ;
 +---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -264,18 +249,17 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------+
-; State Machine - |MM|cur                                                                             ;
-+---------------+------------+---------------+----------+---------------+--------------+--------------+
-; Name          ; cur.finish ; cur.not_legal ; cur.hold ; cur.calculate ; cur.load_mx2 ; cur.load_mx1 ;
-+---------------+------------+---------------+----------+---------------+--------------+--------------+
-; cur.load_mx1  ; 0          ; 0             ; 0        ; 0             ; 0            ; 0            ;
-; cur.load_mx2  ; 0          ; 0             ; 0        ; 0             ; 1            ; 1            ;
-; cur.calculate ; 0          ; 0             ; 0        ; 1             ; 0            ; 1            ;
-; cur.hold      ; 0          ; 0             ; 1        ; 0             ; 0            ; 1            ;
-; cur.not_legal ; 0          ; 1             ; 0        ; 0             ; 0            ; 1            ;
-; cur.finish    ; 1          ; 0             ; 0        ; 0             ; 0            ; 1            ;
-+---------------+------------+---------------+----------+---------------+--------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |MM|Current_State                                                                                                                    ;
++--------------------------+--------------------------+-----------------------+-------------------------+-------------------------+--------------------+
+; Name                     ; Current_State.Validation ; Current_State.Mat_Mul ; Current_State.Load_Mat2 ; Current_State.Load_Mat1 ; Current_State.Done ;
++--------------------------+--------------------------+-----------------------+-------------------------+-------------------------+--------------------+
+; Current_State.Load_Mat1  ; 0                        ; 0                     ; 0                       ; 0                       ; 0                  ;
+; Current_State.Load_Mat2  ; 0                        ; 0                     ; 1                       ; 1                       ; 0                  ;
+; Current_State.Mat_Mul    ; 0                        ; 1                     ; 0                       ; 1                       ; 0                  ;
+; Current_State.Validation ; 1                        ; 0                     ; 0                       ; 1                       ; 0                  ;
+; Current_State.Done       ; 0                        ; 0                     ; 0                       ; 1                       ; 1                  ;
++--------------------------+--------------------------+-----------------------+-------------------------+-------------------------+--------------------+
 
 
 +------------------------------------------------------------+
@@ -283,10 +267,9 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
-; cur~4                                 ; Lost fanout        ;
-; cur~5                                 ; Lost fanout        ;
-; cur~6                                 ; Lost fanout        ;
-; Total Number of Removed Registers = 3 ;                    ;
+; Current_State~4                       ; Lost fanout        ;
+; Current_State~5                       ; Lost fanout        ;
+; Total Number of Removed Registers = 2 ;                    ;
 +---------------------------------------+--------------------+
 
 
@@ -295,12 +278,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 321   ;
-; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 7     ;
-; Number of registers using Asynchronous Clear ; 64    ;
+; Total registers                              ; 309   ;
+; Number of registers using Synchronous Clear  ; 22    ;
+; Number of registers using Synchronous Load   ; 5     ;
+; Number of registers using Asynchronous Clear ; 53    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 271   ;
+; Number of registers using Clock Enable       ; 264   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -310,9 +293,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |MM|cnt[3]                 ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |MM|mx2_row_cnt            ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |MM|mx2_col_cnt            ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; Yes        ; |MM|out_data[2]~reg0       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |MM|Mat2_Cur_Col           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -321,18 +303,17 @@ Encoding Type:  One-Hot
 +----------------+-------+-------------------------------------------+
 ; Parameter Name ; Value ; Type                                      ;
 +----------------+-------+-------------------------------------------+
-; load_mx1       ; 0     ; Signed Integer                            ;
-; load_mx2       ; 1     ; Signed Integer                            ;
-; calculate      ; 2     ; Signed Integer                            ;
-; hold           ; 3     ; Signed Integer                            ;
-; not_legal      ; 4     ; Signed Integer                            ;
-; finish         ; 5     ; Signed Integer                            ;
+; Load_Mat1      ; 000   ; Unsigned Binary                           ;
+; Load_Mat2      ; 001   ; Unsigned Binary                           ;
+; Mat_Mul        ; 010   ; Unsigned Binary                           ;
+; Validation     ; 011   ; Unsigned Binary                           ;
+; Done           ; 100   ; Unsigned Binary                           ;
 +----------------+-------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult2                     ;
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                     ;
 +------------------------------------------------+--------------+---------------------+
 ; Parameter Name                                 ; Value        ; Type                ;
 +------------------------------------------------+--------------+---------------------+
@@ -366,109 +347,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                     ;
-+------------------------------------------------+--------------+---------------------+
-; Parameter Name                                 ; Value        ; Type                ;
-+------------------------------------------------+--------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 4            ; Untyped             ;
-; LPM_WIDTHB                                     ; 4            ; Untyped             ;
-; LPM_WIDTHP                                     ; 8            ; Untyped             ;
-; LPM_WIDTHR                                     ; 8            ; Untyped             ;
-; LPM_WIDTHS                                     ; 1            ; Untyped             ;
-; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
-; LPM_PIPELINE                                   ; 0            ; Untyped             ;
-; LATENCY                                        ; 0            ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
-; USE_EAB                                        ; OFF          ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
-; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_j8t     ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
-+------------------------------------------------+--------------+---------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1                     ;
-+------------------------------------------------+--------------+---------------------+
-; Parameter Name                                 ; Value        ; Type                ;
-+------------------------------------------------+--------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 4            ; Untyped             ;
-; LPM_WIDTHB                                     ; 4            ; Untyped             ;
-; LPM_WIDTHP                                     ; 8            ; Untyped             ;
-; LPM_WIDTHR                                     ; 8            ; Untyped             ;
-; LPM_WIDTHS                                     ; 1            ; Untyped             ;
-; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
-; LPM_PIPELINE                                   ; 0            ; Untyped             ;
-; LATENCY                                        ; 0            ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
-; USE_EAB                                        ; OFF          ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
-; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_j8t     ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
-+------------------------------------------------+--------------+---------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +--------------------------------------------------------+
 ; lpm_mult Parameter Settings by Entity Instance         ;
 +---------------------------------------+----------------+
 ; Name                                  ; Value          ;
 +---------------------------------------+----------------+
-; Number of entity instances            ; 3              ;
-; Entity Instance                       ; lpm_mult:Mult2 ;
+; Number of entity instances            ; 1              ;
+; Entity Instance                       ; lpm_mult:Mult0 ;
 ;     -- LPM_WIDTHA                     ; 8              ;
 ;     -- LPM_WIDTHB                     ; 8              ;
 ;     -- LPM_WIDTHP                     ; 16             ;
 ;     -- LPM_REPRESENTATION             ; SIGNED         ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; NO             ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-; Entity Instance                       ; lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 4              ;
-;     -- LPM_WIDTHB                     ; 4              ;
-;     -- LPM_WIDTHP                     ; 8              ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; NO             ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-; Entity Instance                       ; lpm_mult:Mult1 ;
-;     -- LPM_WIDTHA                     ; 4              ;
-;     -- LPM_WIDTHB                     ; 4              ;
-;     -- LPM_WIDTHP                     ; 8              ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO             ;
 ;     -- INPUT_B_IS_CONSTANT            ; NO             ;
 ;     -- USE_EAB                        ; OFF            ;
@@ -484,28 +373,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 36                          ;
-; cycloneiii_ff         ; 321                         ;
-;     CLR               ; 41                          ;
-;     CLR SCLR          ; 1                           ;
-;     CLR SLD           ; 7                           ;
+; cycloneiii_ff         ; 309                         ;
+;     CLR               ; 20                          ;
+;     CLR SCLR          ; 20                          ;
+;     CLR SLD           ; 5                           ;
 ;     ENA               ; 256                         ;
-;     ENA CLR           ; 8                           ;
-;     ENA CLR SCLR      ; 7                           ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 395                         ;
-;     arith             ; 33                          ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 31                          ;
-;     normal            ; 362                         ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 29                          ;
-;         3 data inputs ; 65                          ;
-;         4 data inputs ; 266                         ;
+;     ENA CLR           ; 6                           ;
+;     ENA CLR SCLR      ; 2                           ;
+; cycloneiii_lcell_comb ; 327                         ;
+;     arith             ; 19                          ;
+;         3 data inputs ; 19                          ;
+;     normal            ; 308                         ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 55                          ;
+;         4 data inputs ; 231                         ;
 ; cycloneiii_mac_mult   ; 1                           ;
 ; cycloneiii_mac_out    ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.10                        ;
-; Average LUT depth     ; 4.09                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.14                        ;
 +-----------------------+-----------------------------+
 
 
@@ -514,7 +400,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -524,34 +410,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri May 10 21:39:23 2024
+    Info: Processing started: Mon May 13 19:02:39 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MM -c MM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file /downloads/ncku-digital_ic_design/hw3_p76124265/rtl/mm.v
-    Info (12023): Found entity 1: MM File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 2
-Warning (10236): Verilog HDL Implicit Net warning at MM.v(16): created implicit net for "done" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 16
+    Info (12023): Found entity 1: MM File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 6
 Info (12127): Elaborating entity "MM" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at MM.v(16): object "done" assigned a value but never read File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 16
-Warning (10230): Verilog HDL assignment warning at MM.v(55): truncated value with size 32 to match size of target (4) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 55
-Warning (10230): Verilog HDL assignment warning at MM.v(58): truncated value with size 32 to match size of target (4) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 58
-Warning (10230): Verilog HDL assignment warning at MM.v(59): truncated value with size 32 to match size of target (4) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 59
-Warning (10230): Verilog HDL assignment warning at MM.v(64): truncated value with size 32 to match size of target (4) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 64
-Warning (10230): Verilog HDL assignment warning at MM.v(67): truncated value with size 32 to match size of target (4) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 67
-Warning (10230): Verilog HDL assignment warning at MM.v(68): truncated value with size 32 to match size of target (4) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 68
-Warning (10230): Verilog HDL assignment warning at MM.v(80): truncated value with size 32 to match size of target (4) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 80
-Warning (10230): Verilog HDL assignment warning at MM.v(84): truncated value with size 32 to match size of target (4) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 84
-Warning (10230): Verilog HDL assignment warning at MM.v(89): truncated value with size 32 to match size of target (4) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 89
-Warning (10230): Verilog HDL assignment warning at MM.v(95): truncated value with size 32 to match size of target (4) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 95
+Warning (10230): Verilog HDL assignment warning at MM.v(172): truncated value with size 32 to match size of target (3) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 172
+Warning (10230): Verilog HDL assignment warning at MM.v(176): truncated value with size 32 to match size of target (3) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 176
+Warning (10230): Verilog HDL assignment warning at MM.v(179): truncated value with size 32 to match size of target (3) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 179
+Warning (10230): Verilog HDL assignment warning at MM.v(180): truncated value with size 32 to match size of target (3) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 180
+Warning (10230): Verilog HDL assignment warning at MM.v(187): truncated value with size 32 to match size of target (3) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 187
+Warning (10230): Verilog HDL assignment warning at MM.v(191): truncated value with size 32 to match size of target (3) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 191
+Warning (10230): Verilog HDL assignment warning at MM.v(194): truncated value with size 32 to match size of target (3) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 194
+Warning (10230): Verilog HDL assignment warning at MM.v(195): truncated value with size 32 to match size of target (3) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 195
+Warning (10230): Verilog HDL assignment warning at MM.v(202): truncated value with size 32 to match size of target (3) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 202
+Warning (10230): Verilog HDL assignment warning at MM.v(208): truncated value with size 32 to match size of target (3) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 208
+Warning (10230): Verilog HDL assignment warning at MM.v(214): truncated value with size 32 to match size of target (3) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 214
+Warning (10230): Verilog HDL assignment warning at MM.v(221): truncated value with size 32 to match size of target (3) File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 221
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "mx1" is uninferred due to asynchronous read logic File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 12
-    Info (276007): RAM logic "mx2" is uninferred due to asynchronous read logic File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 12
-Info (278001): Inferred 3 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult2" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 17
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 17
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 17
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult2" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 17
-Info (12133): Instantiated megafunction "lpm_mult:Mult2" with the following parameter: File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 17
+    Info (276007): RAM logic "Mat1" is uninferred due to asynchronous read logic File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 25
+    Info (276007): RAM logic "Mat2" is uninferred due to asynchronous read logic File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 29
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 115
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 115
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 115
     Info (12134): Parameter "LPM_WIDTHA" = "8"
     Info (12134): Parameter "LPM_WIDTHB" = "8"
     Info (12134): Parameter "LPM_WIDTHP" = "16"
@@ -563,68 +447,19 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult2" with the following para
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_73t.tdf
     Info (12023): Found entity 1: mult_73t File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_73t.tdf Line: 29
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 17
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/RTL/MM.v Line: 17
-    Info (12134): Parameter "LPM_WIDTHA" = "4"
-    Info (12134): Parameter "LPM_WIDTHB" = "4"
-    Info (12134): Parameter "LPM_WIDTHP" = "8"
-    Info (12134): Parameter "LPM_WIDTHR" = "8"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_j8t.tdf
-    Info (12023): Found entity 1: mult_j8t File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 29
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following LCELL buffer node(s):
-        Warning (14320): Synthesized away node "lpm_mult:Mult1|mult_j8t:auto_generated|le3a[5]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 41
-        Warning (14320): Synthesized away node "lpm_mult:Mult1|mult_j8t:auto_generated|le5a[4]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 43
-        Warning (14320): Synthesized away node "lpm_mult:Mult1|mult_j8t:auto_generated|le5a[0]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 43
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le3a[5]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 41
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le5a[4]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 43
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le5a[0]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 43
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following LCELL buffer node(s):
-        Warning (14320): Synthesized away node "lpm_mult:Mult1|mult_j8t:auto_generated|le3a[4]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 41
-        Warning (14320): Synthesized away node "lpm_mult:Mult1|mult_j8t:auto_generated|le4a[5]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 42
-        Warning (14320): Synthesized away node "lpm_mult:Mult1|mult_j8t:auto_generated|le4a[4]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 42
-        Warning (14320): Synthesized away node "lpm_mult:Mult1|mult_j8t:auto_generated|le4a[3]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 42
-        Warning (14320): Synthesized away node "lpm_mult:Mult1|mult_j8t:auto_generated|le4a[2]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 42
-        Warning (14320): Synthesized away node "lpm_mult:Mult1|mult_j8t:auto_generated|le5a[3]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 43
-        Warning (14320): Synthesized away node "lpm_mult:Mult1|mult_j8t:auto_generated|le5a[2]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 43
-        Warning (14320): Synthesized away node "lpm_mult:Mult1|mult_j8t:auto_generated|le5a[1]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 43
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le3a[4]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 41
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le4a[5]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 42
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le4a[4]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 42
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le4a[3]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 42
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le4a[2]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 42
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le5a[3]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 43
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le5a[2]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 43
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le5a[1]" File: E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/db/mult_j8t.tdf Line: 43
-Info (13014): Ignored 40 buffer(s)
-    Info (13016): Ignored 8 CARRY_SUM buffer(s)
-    Info (13019): Ignored 32 SOFT buffer(s)
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/output_files/MM.map.smsg
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 688 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 620 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 651 logic cells
+    Info (21061): Implemented 583 logic cells
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Fri May 10 21:39:37 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:10
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in E:/Downloads/NCKU-Digital_IC_Design/HW3_P76124265/Gate-level/output_files/MM.map.smsg.
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Mon May 13 19:02:51 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:09
 
 

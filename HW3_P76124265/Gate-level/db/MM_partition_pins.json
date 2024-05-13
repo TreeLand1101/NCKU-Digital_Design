@@ -4,10 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "is_legal",
-					"strict" : false
-				},
-				{
 					"name" : "out_data[0]",
 					"strict" : false
 				},
@@ -88,6 +84,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "is_legal",
+					"strict" : false
+				},
+				{
 					"name" : "change_row",
 					"strict" : false
 				},
@@ -100,10 +100,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "col_end",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -113,6 +109,10 @@
 				},
 				{
 					"name" : "row_end",
+					"strict" : false
+				},
+				{
+					"name" : "col_end",
 					"strict" : false
 				},
 				{

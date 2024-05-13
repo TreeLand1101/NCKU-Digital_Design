@@ -1,9 +1,8 @@
 
-State Machine - |MM|cur
-Name cur.finish cur.not_legal cur.hold cur.calculate cur.load_mx2 cur.load_mx1 
-cur.load_mx1 0 0 0 0 0 0 
-cur.load_mx2 0 0 0 0 1 1 
-cur.calculate 0 0 0 1 0 1 
-cur.hold 0 0 1 0 0 1 
-cur.not_legal 0 1 0 0 0 1 
-cur.finish 1 0 0 0 0 1 
+State Machine - |MM|Current_State
+Name Current_State.Validation Current_State.Mat_Mul Current_State.Load_Mat2 Current_State.Load_Mat1 Current_State.Done 
+Current_State.Load_Mat1 0 0 0 0 0 
+Current_State.Load_Mat2 0 0 1 1 0 
+Current_State.Mat_Mul 0 1 0 1 0 
+Current_State.Validation 1 0 0 1 0 
+Current_State.Done 0 0 0 1 1 
