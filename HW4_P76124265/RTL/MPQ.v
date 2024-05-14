@@ -33,21 +33,25 @@ parameter [Command_Bit - 1:0] Write = 4;
 
 reg [7:0] Size;
 reg [7:0] Array [7:0];
+reg [7:0] i;
 
 reg Build_Queue_Enable;
 reg Extract_Max_Enable;
 reg Increase_Value_Enable;
 reg Insert_Data_Enable;
+reg Max_Heapify_Enable;
 
 reg Build_Queue_Done;
 reg Extract_Max_Done;
 reg Increase_Value_Done;
 reg Insert_Data_Done;
+reg Max_Heapify_Done;
 
-Build_Queue Build_Queue_inst(.Array(Array), .Size(Size), .enble(Build_Queue_Enable), .done(Build_Queue_Done));
-Extract_Max Extract_Max_inst(.Array(Array), .Size(Size), .enble(Extract_Max_Enable), .done(Extract_Max_Done));
-Increase_Value Increase_Value_inst(.Array(Array), .Size(Size), .index(index), .value(value), .enble(Increase_Value_Enable), .done(Increase_Value_Done));
-Insert_Data Insert_Data_inst(.Array(Array), .Size(Size), .value(value), .enble(Insert_Data_Enable), .done(Insert_Data_Done));
+Build_Queue Build_Queue(.Array(Array), .Size(Size), .enble(Build_Queue_Enable), .done(Build_Queue_Done));
+Extract_Max Extract_Max(.Array(Array), .Size(Size), .enble(Extract_Max_Enable), .done(Extract_Max_Done));
+Increase_Value Increase_Value(.Array(Array), .Size(Size), .index(index), .value(value), .enble(Increase_Value_Enable), .done(Increase_Value_Done));
+Insert_Data Insert_Data(.Array(Array), .Size(Size), .value(value), .enble(Insert_Data_Enable), .done(Insert_Data_Done));
+Max_Heapify Max_Heapify(.Array(Array), .Size(Size), .i(i), .enble(Max_Heapify_Enable), .done(Max_Heapify_Done));
 
 // State Register
 always @(posedge clk or posedge rst) 
