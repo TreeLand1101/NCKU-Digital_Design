@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/
+vMPQ
+!s110 1716109857
+!i10b 1
+!s100 o?3fnT@?2aS:Fomj2=2Q[3
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I63PBk5bTFXPm4O9:@A<_V2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL
+w1716109854
+8E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.v
+FE:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.v
+!i122 310
+L0 5 218
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1716109856.000000
+!s107 E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.v|
+!i113 1
+o-work work
+Z4 tCvgOpt 0
+n@m@p@q
+vRAM
+Z5 !s110 1716109895
+!i10b 1
+!s100 :Hzjl5Ha3YN41PQd@7Bic1
+R0
+I`URllMz]Ze1Yb^DEg8dj]0
+R1
+R2
+Z6 w1714954826
+Z7 8testfixture.v
+Z8 Ftestfixture.v
+!i122 314
+L0 215 17
+R3
+r1
+!s85 0
+31
+Z9 !s108 1716109895.000000
+!s107 testfixture.v|
+Z10 !s90 -reportprogress|300|testfixture.v|+define+P1|
+!i113 1
+Z11 !s92 +define+P1
+R4
+n@r@a@m
+vtest
+R5
+!i10b 1
+!s100 1Y26_1c;PhG;:5<_DTjD?1
+R0
+I>[Ca9hFKZ]G3lmI1BEeRF1
+R1
+R2
+R6
+R7
+R8
+!i122 314
+L0 48 164
+R3
+r1
+!s85 0
+31
+R9
+Z12 !s107 testfixture.v|
+R10
+!i113 1
+R11
+R4
