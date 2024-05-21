@@ -1,0 +1,17 @@
+E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/testfixture.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/testfixture.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module test
+-- Compiling module RAM
+
+Top level modules:
+	test
+
+} {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.vo {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.vo
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MPQ
+-- Compiling module hard_block
+
+Top level modules:
+	MPQ
+
+} {} {}}

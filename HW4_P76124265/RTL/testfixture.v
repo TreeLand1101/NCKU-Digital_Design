@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-`define CYCLE    15.0        //modefy by yourself
+`define CYCLE    35.0        //modefy by yourself
 
 `ifdef P0//Bulid_Queue,Write 30
    `define EXPECT   "./dat/P0/golden0.dat"
@@ -10,7 +10,7 @@
    `define DATA_NUM   12     
    `define CMD_NUM    2      
    `define GOLDEN_NUM 12     
-   `define End_CYCLE  10000  //modefy by yourself
+   `define End_CYCLE  150  //modefy by yourself
 `elsif P1//Bulid_Queue,Extract_Max,Write 30
    `define EXPECT   "./dat/P1/golden1.dat"
    `define CMD      "./dat/P1/cmd1.dat"
@@ -20,7 +20,7 @@
    `define DATA_NUM   12    
    `define CMD_NUM    5     
    `define GOLDEN_NUM 9     
-   `define End_CYCLE  10000  //modefy by yourself
+   `define End_CYCLE  150  //modefy by yourself
 `elsif P2//Bulid_Queue,Extract_Max,Increase_Value,Write 20
    `define EXPECT   "./dat/P2/golden2.dat"
    `define CMD      "./dat/P2/cmd2.dat"
@@ -30,7 +30,7 @@
    `define DATA_NUM   12    
    `define CMD_NUM    8     
    `define GOLDEN_NUM 9     
-   `define End_CYCLE  10000  //modefy by yourself
+   `define End_CYCLE  150  //modefy by yourself
 `else    //Bulid_Queue,Extract_Max,Increase_Value,Insert_Data,Write 20
    `define EXPECT   "./dat/P3/golden.dat"
    `define CMD      "./dat/P3/cmd.dat"
@@ -40,7 +40,7 @@
    `define DATA_NUM   12
    `define CMD_NUM    12
    `define GOLDEN_NUM 13
-   `define End_CYCLE  10000  //modefy by yourself
+   `define End_CYCLE  150  //modefy by yourself
 `endif
 
 `define SCORE      100

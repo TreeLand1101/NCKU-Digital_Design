@@ -9,74 +9,97 @@ z2
 !i10f 100
 cModel Technology
 dE:/
+vhard_block
+Z0 !s110 1716222334
+!i10b 1
+!s100 mo6o0L^9o9>jP>PI[DZYZ1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IZO=bh^iM17_ab1Eg:]67X2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dE:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL
+Z4 w1716215418
+Z5 8E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.vo
+Z6 FE:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.vo
+!i122 194
+L0 391635 34
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1716222332.000000
+Z9 !s107 E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.vo|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
 vMPQ
-!s110 1716123889
-!i10b 1
-!s100 K16mQ3ceJ[iUmeoNTAKPn1
-Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
-Ij8LGo2j_eMHomMhG;TmAB2
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dE:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL
-w1716123870
-8E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.v
-FE:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.v
-!i122 335
-L0 5 238
-Z3 OV;L;2020.1;71
-r1
-!s85 0
-31
-!s108 1716123889.000000
-!s107 E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.v|
-!s90 -reportprogress|300|-work|work|-stats=none|E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.v|
-!i113 1
-o-work work
-Z4 tCvgOpt 0
-n@m@p@q
-vRAM
-Z5 !s110 1716123911
-!i10b 1
-!s100 :Hzjl5Ha3YN41PQd@7Bic1
 R0
-Ic:K88mN9Ok>FKg2=6C1[M1
+!i10b 1
+!s100 n?gz;c:PI<Oz6WfYQLbih3
 R1
+I>I?7^BMi@5dQP7I2h@h?F2
 R2
-Z6 w1714954826
-Z7 8testfixture.v
-Z8 Ftestfixture.v
-!i122 337
-L0 215 17
 R3
-r1
-!s85 0
-31
-Z9 !s108 1716123911.000000
-!s107 testfixture.v|
-Z10 !s90 -reportprogress|300|testfixture.v|+define+P3|
-!i113 1
-Z11 !s92 +define+P3
 R4
-n@r@a@m
-vtest
 R5
-!i10b 1
-!s100 il<]_FejIoC28d65`J=OD2
-R0
-IE:jCj_`ehk=@I[ao<ifGj3
-R1
-R2
 R6
+!i122 194
+L0 32 391602
 R7
-R8
-!i122 337
-L0 48 164
-R3
 r1
 !s85 0
 31
+R8
 R9
-Z12 !s107 testfixture.v|
 R10
 !i113 1
 R11
-R4
+R12
+n@m@p@q
+vRAM
+Z13 !s110 1716222337
+!i10b 1
+!s100 :Hzjl5Ha3YN41PQd@7Bic1
+R1
+Ic:K88mN9Ok>FKg2=6C1[M1
+R2
+R3
+Z14 w1716222076
+Z15 8testfixture.v
+Z16 Ftestfixture.v
+!i122 196
+L0 215 17
+R7
+r1
+!s85 0
+31
+Z17 !s108 1716222337.000000
+!s107 testfixture.v|
+Z18 !s90 -reportprogress|300|testfixture.v|+define+P3|
+!i113 1
+Z19 !s92 +define+P3
+R12
+n@r@a@m
+vtest
+R13
+!i10b 1
+!s100 IQdCZ`cGWN4iN6C5KJ;^T1
+R1
+Ia>`4YP8=R<B;fVF2<5Vjm3
+R2
+R3
+R14
+R15
+R16
+!i122 196
+L0 48 164
+R7
+r1
+!s85 0
+31
+R17
+Z20 !s107 testfixture.v|
+R18
+!i113 1
+R19
+R12

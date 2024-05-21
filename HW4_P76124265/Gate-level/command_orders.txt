@@ -1,0 +1,8 @@
+compile all
+
+vlog testfixture.v +define+PX
+
+start sim
+
+run all
+

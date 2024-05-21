@@ -33,7 +33,7 @@ reg [7:0] Array [255:0];
 reg [7:0] i, i_temp, target_index;
 wire [7:0] l, r;
 reg [7:0] largest;
-reg Max_Heapify_Running;
+reg Max_Heapify_Enable;
 reg Command_Done;
 
 assign l = (i << 1) + 1;
@@ -90,7 +90,7 @@ begin
         i_temp <= 0;
         target_index <= 0;
         Command_Done <= 0;
-        Max_Heapify_Running <= 0;
+        Max_Heapify_Enable <= 0;
         Build_Queue_Enable <= 0;
         Extract_Max_Enable <= 0;
         Increase_Value_Enable <= 0;
@@ -136,28 +136,58 @@ begin
         
             Execute_Cmd: begin
                 if (Build_Queue_Enable) begin
-                    if (!Max_Heapify_Running) begin
+                    if (Max_Heapify_Enable) begin
+                        if ((l >= Size || Array[l] <= Array[i]) && (r >= Size || Array[r] <= Array[i])) begin
+                            Max_Heapify_Enable <= 0;
+                        end
+                        else if ((l < Size) && (Array[l] > Array[i]) && (r >= Size || Array[r] <= Array[l])) begin
+                            i <= l;
+                            Array[l] <= Array[i];
+                            Array[i] <= Array[l];
+                        end
+                        else begin
+                            i <= r;
+                            Array[r] <= Array[i];
+                            Array[i] <= Array[r];
+                        end
+                    end
+                    else begin
                         if (i_temp == 0) begin
                             Command_Done <= 1;
                         end
                         else begin
-                            Max_Heapify_Running <= 1;
+                            Max_Heapify_Enable <= 1;
                             i_temp <= i_temp - 1;
                             i <= i_temp - 1;
                         end
                     end
                 end
                 else if (Extract_Max_Enable) begin
-                    if ((Size < 1) || (!Max_Heapify_Running && (i_temp - 1 == Size)))
+                    if ((Size < 1) || (!Max_Heapify_Enable && (i_temp - 1 == Size)))
                         Command_Done <= 1;
-                    else if (!Max_Heapify_Running) begin
-                        Array[1] = Array[Size - 1];
-                        Size = Size - 1;
-                        i <= 1;
-                        Max_Heapify_Running <= 1;
+                    else begin 
+                        if (!Max_Heapify_Enable) begin
+                            Array[1] = Array[Size - 1];
+                            Size = Size - 1;
+                            i <= 1;
+                            Max_Heapify_Enable <= 1;
+                        end
+                        else begin
+                            if ((l >= Size || Array[l] <= Array[i]) && (r >= Size || Array[r] <= Array[i])) begin
+                                Max_Heapify_Enable <= 0;
+                            end
+                            else if ((l < Size) && (Array[l] > Array[i]) && (r >= Size || Array[r] <= Array[l])) begin
+                                i <= l;
+                                Array[l] <= Array[i];
+                                Array[i] <= Array[l];
+                            end
+                            else begin
+                                i <= r;
+                                Array[r] <= Array[i];
+                                Array[i] <= Array[r];
+                            end
+                        end
                     end
-                    else
-                        Max_Heapify_Running <= 1;
                 end
                 else if (Increase_Value_Enable) begin
                     if (value <= Array[target_index])
@@ -208,7 +238,7 @@ begin
                 i_temp <= 0;
                 target_index <= 0;
                 Command_Done <= 0;
-                Max_Heapify_Running <= 0;    
+                Max_Heapify_Enable <= 0;    
                 Build_Queue_Enable <= 0;
                 Extract_Max_Enable <= 0;
                 Increase_Value_Enable <= 0;
@@ -216,26 +246,6 @@ begin
                 Write_Enable <= 0;
             end
         endcase
-    end
-end
-
-// Max_Heapify
-always @(posedge clk or posedge rst) 
-begin
-    if (Max_Heapify_Running) begin
-        if ((l >= Size || Array[l] <= Array[i]) && (r >= Size || Array[r] <= Array[i])) begin
-            Max_Heapify_Running <= 0;
-        end
-        else if ((l < Size) && (Array[l] > Array[i]) && (r >= Size || Array[r] <= Array[l])) begin
-            i <= l;
-            Array[l] <= Array[i];
-            Array[i] <= Array[l];
-        end
-        else begin
-            i <= r;
-            Array[r] <= Array[i];
-            Array[i] <= Array[r];
-        end
     end
 end
 
