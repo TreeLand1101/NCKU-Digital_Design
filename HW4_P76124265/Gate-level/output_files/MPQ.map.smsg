@@ -1,2 +1,1 @@
-Warning (10268): Verilog HDL information at MPQ.v(80): always construct contains both blocking and non-blocking assignments File: E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.v Line: 80
 Info (10281): Verilog HDL Declaration information at MPQ.v(18): object "done" differs only in case from object "Done" in the same scope File: E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.v Line: 18

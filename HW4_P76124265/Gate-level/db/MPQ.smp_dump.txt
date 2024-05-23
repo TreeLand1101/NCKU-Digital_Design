@@ -1,7 +1,9 @@
 
 State Machine - |MPQ|Current_State
-Name Current_State.Done Current_State.Execute_Cmd Current_State.Read_Cmd Current_State.Load 
-Current_State.Load 0 0 0 0 
-Current_State.Read_Cmd 0 0 1 1 
-Current_State.Execute_Cmd 0 1 0 1 
-Current_State.Done 1 0 0 1 
+Name Current_State.Done Current_State.Parent_Swap Current_State.Max_Heapify Current_State.Execute_Cmd Current_State.Read_Cmd Current_State.Load 
+Current_State.Load 0 0 0 0 0 0 
+Current_State.Read_Cmd 0 0 0 0 1 1 
+Current_State.Execute_Cmd 0 0 0 1 0 1 
+Current_State.Max_Heapify 0 0 1 0 0 1 
+Current_State.Parent_Swap 0 1 0 0 0 1 
+Current_State.Done 1 0 0 0 0 1 
