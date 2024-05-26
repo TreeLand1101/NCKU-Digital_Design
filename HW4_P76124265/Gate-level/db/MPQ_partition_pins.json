@@ -92,6 +92,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "cmd[1]",
+					"strict" : false
+				},
+				{
 					"name" : "cmd[2]",
 					"strict" : false
 				},
@@ -100,23 +104,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "cmd[1]",
+					"name" : "data[0]",
 					"strict" : false
 				},
 				{
-					"name" : "index[7]",
-					"strict" : false
-				},
-				{
-					"name" : "value[7]",
-					"strict" : false
-				},
-				{
-					"name" : "index[5]",
-					"strict" : false
-				},
-				{
-					"name" : "index[1]",
+					"name" : "value[0]",
 					"strict" : false
 				},
 				{
@@ -128,6 +120,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "index[5]",
+					"strict" : false
+				},
+				{
+					"name" : "index[6]",
+					"strict" : false
+				},
+				{
+					"name" : "value[7]",
+					"strict" : false
+				},
+				{
+					"name" : "index[1]",
+					"strict" : false
+				},
+				{
 					"name" : "index[0]",
 					"strict" : false
 				},
@@ -136,7 +144,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "index[6]",
+					"name" : "index[7]",
 					"strict" : false
 				},
 				{
@@ -161,14 +169,6 @@
 				},
 				{
 					"name" : "value[1]",
-					"strict" : false
-				},
-				{
-					"name" : "value[0]",
-					"strict" : false
-				},
-				{
-					"name" : "data[0]",
 					"strict" : false
 				},
 				{

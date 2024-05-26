@@ -10,46 +10,46 @@ z2
 cModel Technology
 dE:/
 vhard_block
-!s110 1716478473
+!s110 1716708948
 !i10b 1
-!s100 a^g5b_fj3XAKQDbG@cDJ>1
+!s100 TBgC1JZQ_PX=J=3jFYLf?1
 Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I4W9QjlEVI8=6QS7f<=zji2
+IAKlB[>iX@2k^HX;HUXRV50
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dE:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL
-w1716477188
+w1716707447
 8E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.vo
 FE:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.vo
-!i122 31
-L0 349864 34
+!i122 135
+L0 361449 34
 Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1716478471.000000
+!s108 1716708946.000000
 !s107 E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.vo|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.vo|
 !i113 1
 Z4 o-work work
 Z5 tCvgOpt 0
 vMPQ
-!s110 1716478901
+!s110 1716709216
 !i10b 1
-!s100 4cOlBV80Omcn7h6Q]GKFn3
+!s100 J5i?gScl:N=;[_V`6<Jj`2
 R0
-IkcnFN_7WRk;UH4T=CDQ]B3
+InOREfQ]WSVg`74b69@?DQ0
 R1
 R2
-w1716459056
+w1716705958
 8E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.v
 FE:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.v
-!i122 38
-L0 5 241
+!i122 141
+L0 5 246
 R3
 r1
 !s85 0
 31
-!s108 1716478901.000000
+!s108 1716709216.000000
 !s107 E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Downloads/NCKU-Digital_IC_Design/HW4_P76124265/RTL/MPQ.v|
 !i113 1
@@ -57,23 +57,23 @@ R4
 R5
 n@m@p@q
 vRAM
-Z6 !s110 1716479020
+Z6 !s110 1716709380
 !i10b 1
 !s100 :Hzjl5Ha3YN41PQd@7Bic1
 R0
 Ic:K88mN9Ok>FKg2=6C1[M1
 R1
 R2
-Z7 w1716478467
+Z7 w1716708942
 Z8 8testfixture.v
 Z9 Ftestfixture.v
-!i122 42
+!i122 146
 L0 215 17
 R3
 r1
 !s85 0
 31
-Z10 !s108 1716479020.000000
+Z10 !s108 1716709379.000000
 !s107 testfixture.v|
 Z11 !s90 -reportprogress|300|testfixture.v|+define+P3|
 !i113 1
@@ -83,15 +83,15 @@ n@r@a@m
 vtest
 R6
 !i10b 1
-!s100 ih8A7ZCPYF5H[V8BKee[l3
+!s100 m=_KEE_nBSzV9O1=P@O0;0
 R0
-Ik@gBP`Mn^Tc6>HZbiK1JI2
+IL^SlCdo8RWFl149n1^a552
 R1
 R2
 R7
 R8
 R9
-!i122 42
+!i122 146
 L0 48 164
 R3
 r1

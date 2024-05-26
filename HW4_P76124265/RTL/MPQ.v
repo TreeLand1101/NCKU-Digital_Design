@@ -28,14 +28,17 @@ reg Increase_Value_Enable;
 reg Insert_Data_Enable;
 reg Write_Enable;
 
+reg Max_Heapify_Done;
+
 reg [7:0] Size;
 reg [7:0] Array [255:0];
-reg [7:0] i, i_temp;
-wire [7:0] l, r;
+reg [7:0] i_temp, i;
+wire [7:0] l, r, i_Parent;
 reg Command_Done;
 
-assign l = (i << 1) + 1;
-assign r = (i << 1) + 2;
+assign l = (Build_Queue_Enable || Extract_Max_Enable) ? (i << 1) + 1 : 0;
+assign r = (Build_Queue_Enable || Extract_Max_Enable) ? (i << 1) + 2 : 0;
+assign i_Parent = (Increase_Value_Enable || Insert_Data_Enable) ? (i - 1) >> 1 : 0;
 
 // State Register
 always @(posedge clk or posedge rst) 
@@ -73,17 +76,17 @@ begin
         end  
 
         Max_Heapify: begin
-            if ((l >= Size || Array[l] <= Array[i]) && (r >= Size || Array[r] <= Array[i]))
+            if (Max_Heapify_Done)
                 Next_State = Execute_Cmd;
             else
                 Next_State = Max_Heapify;
         end
 
         Parent_Swap: begin
-            if (i_temp > 0 && Array[(i_temp - 1) >> 1] < Array[i_temp])
-                Next_State = Parent_Swap;
-            else
+            if (Command_Done)
                 Next_State = Done;
+            else
+                Next_State = Parent_Swap;
         end
 
         Done: begin
@@ -110,6 +113,7 @@ begin
         Increase_Value_Enable <= 0;
         Insert_Data_Enable <= 0;
         Write_Enable <= 0;
+        Max_Heapify_Done <= 0;
     end
     else begin
         case (Current_State)
@@ -124,8 +128,8 @@ begin
                 case (cmd)
                     Build_Queue: begin
                         Build_Queue_Enable <= 1;
-                        i <= (Size >> 1);
                         i_temp <= (Size >> 1);
+                        i <= (Size >> 1);
                     end
                     Extract_Max: begin
                         Extract_Max_Enable <= 1;
@@ -137,14 +141,14 @@ begin
                             Command_Done <= 1;
                         else begin
                             Array[index] <= value;
-                            i_temp <= index;
+                            i <= index;
                         end
                     end
                     Insert_Data: begin
                         Insert_Data_Enable <= 1;
                         Size <= Size + 1;
                         Array[Size] <= value;
-                        i_temp <= Size;
+                        i <= Size;
                     end
                     Write: begin
                         Write_Enable <= 1;
@@ -155,13 +159,14 @@ begin
             end
         
             Execute_Cmd: begin
+                Max_Heapify_Done <= 0;
                 if (Build_Queue_Enable) begin
                     if (i_temp == 0) begin
                         Command_Done <= 1;
                     end
                     else begin
-                        i_temp <= i_temp - 1;
                         i <= i_temp - 1;
+                        i_temp <= i_temp - 1;
                     end
                 end
                 else if (Extract_Max_Enable) begin
@@ -180,12 +185,11 @@ begin
 
                 end
                 else if (Write_Enable) begin
-                    if (i_temp < Size) begin
+                    if (RAM_A < Size) begin
                         RAM_valid <= 1;
                         RAM_D <= Array[i_temp];
                         i_temp <= i_temp + 1;
-                        if (RAM_valid)
-                            RAM_A <= i_temp;
+                        RAM_A <= i_temp;
                     end
                     else begin
                         Write_Enable <= 0;
@@ -199,7 +203,7 @@ begin
 
             Max_Heapify: begin
                 if ((l >= Size || Array[l] <= Array[i]) && (r >= Size || Array[r] <= Array[i])) begin
-                    
+                    Max_Heapify_Done <= 1;
                 end
                 else if ((l < Size) && (Array[l] > Array[i]) && (r >= Size || Array[r] <= Array[l])) begin
                     i <= l;
@@ -214,10 +218,10 @@ begin
             end
 
             Parent_Swap: begin
-                if (i_temp > 0 && Array[(i_temp - 1) >> 1] < Array[i_temp]) begin
-                    Array[(i_temp - 1) >> 1] <= Array[i_temp];
-                    Array[i_temp] <= Array[(i_temp - 1) >> 1];
-                    i_temp <= (i_temp - 1) >> 1;
+                if (i > 0 && Array[i_Parent] < Array[i]) begin
+                    Array[i_Parent] <= Array[i];
+                    Array[i] <= Array[i_Parent];
+                    i <= i_Parent;
                 end
                 else 
                     Command_Done <= 1;
@@ -237,6 +241,7 @@ begin
                 Increase_Value_Enable <= 0;
                 Insert_Data_Enable <= 0;
                 Write_Enable <= 0;
+                Max_Heapify_Done <= 0;
             end
         endcase
     end

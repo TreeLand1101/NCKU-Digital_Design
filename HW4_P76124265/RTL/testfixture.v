@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-`define CYCLE    43.0        //modefy by yourself
+`define CYCLE    32.0        //modify by yourself
 
 `ifdef P0//Bulid_Queue,Write 30
    `define EXPECT   "./dat/P0/golden0.dat"

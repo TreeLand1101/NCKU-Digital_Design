@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Thu May 23 19:27:52 2024
+Analysis & Synthesis Status : Successful - Sun May 26 14:50:48 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : MPQ
 Top-level Entity Name : MPQ
 Family : Cyclone IV E
-Total logic elements : 17,052
-    Total combinational functions : 17,051
-    Dedicated logic registers : 2,103
-Total registers : 2103
+Total logic elements : 17,695
+    Total combinational functions : 17,694
+    Dedicated logic registers : 2,104
+Total registers : 2104
 Total pins : 50
 Total virtual pins : 0
 Total memory bits : 0
