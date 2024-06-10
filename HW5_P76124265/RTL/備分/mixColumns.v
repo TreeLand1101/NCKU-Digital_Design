@@ -28,10 +28,10 @@ genvar i;
 generate 
 //MixColumns() can be written as a matrix multiplication in GF(2^8).
 for(i = 0; i < 4; i = i + 1) begin 
-    assign out[(i*32) + 24 +: 8] = mb2(in[(i*32) + 24 +: 8]) ^ mb3(in[(i*32) + 16 +: 8]) ^ in[(i*32) + 8 +: 8] ^ in[i*32 +: 8];
-    assign out[(i*32) + 16 +: 8] = in[(i*32) + 24 +: 8] ^ mb2(in[(i*32) + 16 +: 8]) ^ mb3(in[(i*32) + 8 +: 8]) ^ in[i*32 +: 8];
-    assign out[(i*32) + 8 +: 8] = in[(i*32) + 24 +: 8] ^ in[(i*32) + 16 +: 8] ^ mb2(in[(i*32) + 8 +: 8]) ^ mb3(in[i*32 +: 8]);
-    assign out[i*32 +: 8] = mb3(in[(i*32) + 24 +: 8]) ^ in[(i*32) + 16 +: 8] ^ in[(i*32) + 8 +: 8] ^ mb2(in[i*32 +: 8]);
+    assign out[i*32 + 31 : i*32 + 24] = mb2(in[i*32 + 31 : i*32 + 24]) ^ mb3(in[i*32 + 23 : i*32 + 16]) ^ in[i*32 + 15 : i*32 + 8] ^ in[i*32 + 7 : i*32];
+    assign out[i*32 + 23 : i*32 + 16] = in[i*32 + 31 : i*32 + 24] ^ mb2(in[i*32 + 23 : i*32 + 16]) ^ mb3(in[i*32 + 15 : i*32 + 8]) ^ in[i*32 + 7 : i*32];
+    assign out[i*32 + 15 : i*32 + 8] = in[i*32 + 31 : i*32 + 24] ^ in[i*32 + 23 : i*32 + 16] ^ mb2(in[i*32 + 15 : i*32 + 8]) ^ mb3(in[i*32 + 7 : i*32]);
+    assign out[i*32 + 7 : i*32] = mb3(in[i*32 + 31 : i*32 + 24]) ^ in[i*32 + 23 : i*32 + 16] ^ in[i*32 + 15 : i*32 + 8] ^ mb2(in[i*32 + 7 : i*32]);
 end
 endgenerate
 

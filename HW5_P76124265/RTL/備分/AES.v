@@ -21,15 +21,15 @@ wire [127:0] afterShiftRows;
 
 keyExpansion KE(K, fullkeys);
 
-addRoundKey addRK1 (P, K, states[0]);
+addRoundKey addRK1 (P, fullkeys[0], states[0]);
 
-assign valid = (states[round][127:96] !== 32'hx) ? 1:0;
+assign valid = 1;
 
 genvar i;
 generate
 	
     for(i = 1; i < round; i = i + 1)
-        encryptRound ER(states[i - 1], fullkeys[i], states[i]);
+        encryptRound ER(states[i - 1], fullkeys[i - 1], states[i]);
 
     subBytes SB(states[round - 1], afterSubBytes);
     shiftRows SR(afterSubBytes, afterShiftRows);
