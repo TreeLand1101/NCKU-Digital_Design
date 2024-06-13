@@ -1,30 +1,30 @@
-E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/shiftRows.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/shiftRows.v
+E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/addRoundKey.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/addRoundKey.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module shiftRows
+-- Compiling module addRoundKey
 
 Top level modules:
-	shiftRows
+	addRoundKey
 
-} {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/subBytes.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/subBytes.v
+} {} {}} E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/keyExpansion.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/keyExpansion.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module subBytes
+-- Compiling module keyExpansion
 
 Top level modules:
-	subBytes
+	keyExpansion
 
-} {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/encryptRound.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/encryptRound.v
+} {} {}} E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/tb.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/tb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module encryptRound
+-- Compiling module tb
 
 Top level modules:
-	encryptRound
+	tb
 
-} {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/lastEncryptRound.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/lastEncryptRound.v
+} {} {}} E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/mixColumns.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/mixColumns.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module lastEncryptRound
+-- Compiling module mixColumns
 
 Top level modules:
-	lastEncryptRound
+	mixColumns
 
 } {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/tb.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/tb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -40,12 +40,26 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	keyExpansion
 
-} {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/addRoundKey.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/addRoundKey.v
+} {} {}} E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/lastEncryptRound.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/lastEncryptRound.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module addRoundKey
+-- Compiling module lastEncryptRound
 
 Top level modules:
-	addRoundKey
+	lastEncryptRound
+
+} {} {}} E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/subBytes.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/subBytes.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module subBytes
+
+Top level modules:
+	subBytes
+
+} {} {}} E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/shiftRows.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/shiftRows.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shiftRows
+
+Top level modules:
+	shiftRows
 
 } {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/mixColumns.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/mixColumns.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -54,11 +68,60 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	mixColumns
 
+} {} {}} E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/AES.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/AES.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module AES
+
+Top level modules:
+	AES
+
+} {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/shiftRows.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/shiftRows.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shiftRows
+
+Top level modules:
+	shiftRows
+
+} {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/subBytes.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/subBytes.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module subBytes
+
+Top level modules:
+	subBytes
+
+} {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/lastEncryptRound.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/lastEncryptRound.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module lastEncryptRound
+
+Top level modules:
+	lastEncryptRound
+
+} {} {}} E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/sbox.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/sbox.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sbox
+
+Top level modules:
+	sbox
+
 } {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/sbox.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/sbox.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module sbox
 
 Top level modules:
 	sbox
+
+} {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/encryptRound.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/encryptRound.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module encryptRound
+
+Top level modules:
+	encryptRound
+
+} {} {}} E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/addRoundKey.v {1 {vlog -work work -stats=none E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/addRoundKey.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module addRoundKey
+
+Top level modules:
+	addRoundKey
 
 } {} {}}

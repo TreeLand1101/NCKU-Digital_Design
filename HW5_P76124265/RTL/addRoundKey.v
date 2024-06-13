@@ -1,6 +1,4 @@
-module addRoundKey(clk, rst, in, key, out);
-input clk;
-input rst;
+module addRoundKey(in, key, out);
 input [127:0] in;
 input [127:0] key;
 output [127:0] out;

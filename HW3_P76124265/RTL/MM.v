@@ -44,33 +44,33 @@ begin
     case (Current_State)
         Load_Mat1: begin
             if (row_end) 
-                Next_State <= Load_Mat2;    
+                Next_State = Load_Mat2;    
             else 
-                Next_State <= Load_Mat1;
+                Next_State = Load_Mat1;
         end
 
         Load_Mat2: begin
             if (row_end) 
-                Next_State <= Mat_Mul;
+                Next_State = Mat_Mul;
             else 
-                Next_State <= Load_Mat2;
+                Next_State = Load_Mat2;
         end
      
         Mat_Mul: begin
             if ((Mat1_Col != Mat2_Row) || (Mat1_Cur_Row == Mat1_Row - 1) && (Mat1_Cur_Col == Mat1_Col - 1) && (Mat2_Cur_Row == Mat2_Row - 1) && (Mat2_Cur_Col == Mat2_Col - 1))
-                Next_State <= Done;
+                Next_State = Done;
             else if (Mat1_Cur_Col == Mat1_Col - 1)
-                Next_State <= Validation;
+                Next_State = Validation;
             else
-                Next_State <= Mat_Mul;
+                Next_State = Mat_Mul;
         end
 
         Validation: begin
-            Next_State <= Mat_Mul;
+            Next_State = Mat_Mul;
         end
 
         Done: begin
-            Next_State <= Load_Mat1;
+            Next_State = Load_Mat1;
         end
     endcase
 end

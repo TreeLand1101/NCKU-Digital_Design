@@ -52,30 +52,30 @@ begin
     case (FIFO_CurrentState)
         FIFO_Start: begin
             if (ready_fifo) 
-                FIFO_Nextstate <= FIFO_Read;    
+                FIFO_Nextstate = FIFO_Read;    
             else 
-                FIFO_Nextstate <= FIFO_Start;
+                FIFO_Nextstate = FIFO_Start;
         end
 
         FIFO_Read: begin
             if (people_thing_in == 8'h24)
-                FIFO_Nextstate <= FIFO_Valid;
+                FIFO_Nextstate = FIFO_Valid;
             else
-                FIFO_Nextstate <= FIFO_Read;
+                FIFO_Nextstate = FIFO_Read;
         end
      
         FIFO_Valid: begin
             if (i < Array_Size)
-                FIFO_Nextstate <= FIFO_Valid;
+                FIFO_Nextstate = FIFO_Valid;
             else
-                FIFO_Nextstate <= FIFO_Done_FIFO;
+                FIFO_Nextstate = FIFO_Done_FIFO;
         end
 
         FIFO_Done_FIFO:
             if (done_fifo)
-                FIFO_Nextstate <= FIFO_Start;
+                FIFO_Nextstate = FIFO_Start;
             else
-                FIFO_Nextstate <= FIFO_Done_FIFO;
+                FIFO_Nextstate = FIFO_Done_FIFO;
     endcase
 end
 
@@ -152,55 +152,55 @@ begin
     case (FIFOLIFO_CurrentState)
         FIFOLIFO_Start: begin
             if (ready_lifo)
-                FIFOLIFO_Nextstate <= FIFOLIFO_Read;
+                FIFOLIFO_Nextstate = FIFOLIFO_Read;
             else
-                FIFOLIFO_Nextstate <= FIFOLIFO_Start;
+                FIFOLIFO_Nextstate = FIFOLIFO_Start;
         end
 
         FIFOLIFO_Read: begin
             if (thing_in == 8'h3B)
-                FIFOLIFO_Nextstate <= FIFOLIFO_Valid;
+                FIFOLIFO_Nextstate = FIFOLIFO_Valid;
             else if (thing_in == 8'h24)
-                FIFOLIFO_Nextstate <= FIFOLIFO_Done_LIFO;
+                FIFOLIFO_Nextstate = FIFOLIFO_Done_LIFO;
             else
-                FIFOLIFO_Nextstate <= FIFOLIFO_Read;
+                FIFOLIFO_Nextstate = FIFOLIFO_Read;
         end
 
         FIFOLIFO_Valid: begin
             if (thing_num_zero) 
-                FIFOLIFO_Nextstate <= FIFOLIFO_Valid;
+                FIFOLIFO_Nextstate = FIFOLIFO_Valid;
             else if (j == 0)
-                FIFOLIFO_Nextstate <= FIFOLIFO_Done_Thing;
+                FIFOLIFO_Nextstate = FIFOLIFO_Done_Thing;
             else
-                FIFOLIFO_Nextstate <= FIFOLIFO_Valid;
+                FIFOLIFO_Nextstate = FIFOLIFO_Valid;
         end
 
         FIFOLIFO_Done_Thing: begin
             if (done_thing)
-                FIFOLIFO_Nextstate <= FIFOLIFO_Read;
+                FIFOLIFO_Nextstate = FIFOLIFO_Read;
             else
-                FIFOLIFO_Nextstate <= FIFOLIFO_Done_Thing;
+                FIFOLIFO_Nextstate = FIFOLIFO_Done_Thing;
         end 
 
         FIFOLIFO_Done_LIFO: begin
             if (done_lifo)
-                FIFOLIFO_Nextstate <= FIFOLIFO_Valid2;
+                FIFOLIFO_Nextstate = FIFOLIFO_Valid2;
             else
-                FIFOLIFO_Nextstate <= FIFOLIFO_Done_LIFO;
+                FIFOLIFO_Nextstate = FIFOLIFO_Done_LIFO;
         end       
 
         FIFOLIFO_Valid2: begin
             if (j < Stack_Top)
-                FIFOLIFO_Nextstate <= FIFOLIFO_Valid2;
+                FIFOLIFO_Nextstate = FIFOLIFO_Valid2;
             else
-                FIFOLIFO_Nextstate <= FIFOLIFO_Done_FIFO2;
+                FIFOLIFO_Nextstate = FIFOLIFO_Done_FIFO2;
         end
 
         FIFOLIFO_Done_FIFO2: begin
             if (done_fifo2)
-                FIFOLIFO_Nextstate <= FIFOLIFO_Start;
+                FIFOLIFO_Nextstate = FIFOLIFO_Start;
             else
-                FIFOLIFO_Nextstate <= FIFOLIFO_Done_FIFO2;
+                FIFOLIFO_Nextstate = FIFOLIFO_Done_FIFO2;
         end        
     endcase
 end
