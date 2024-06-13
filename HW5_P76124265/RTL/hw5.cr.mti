@@ -1,16 +1,16 @@
-E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/subBytes.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/subBytes.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module subBytes
-
-Top level modules:
-	subBytes
-
-} {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/shiftRows.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/shiftRows.v
+E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/shiftRows.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/shiftRows.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module shiftRows
 
 Top level modules:
 	shiftRows
+
+} {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/subBytes.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/subBytes.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module subBytes
+
+Top level modules:
+	subBytes
 
 } {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/encryptRound.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/encryptRound.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -18,6 +18,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	encryptRound
+
+} {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/lastEncryptRound.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/lastEncryptRound.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module lastEncryptRound
+
+Top level modules:
+	lastEncryptRound
 
 } {} {}} E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/tb.v {1 {vlog -work work -stats=none E:/Downloads/NCKU-Digital_IC_Design/HW5_P76124265/RTL/tb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

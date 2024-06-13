@@ -1,5 +1,7 @@
-module keyExpansion (key, fullkeys);
+module keyExpansion (clk, rst, key, fullkeys);
 
+input clk;
+input rst;
 parameter round = 10;
 input [0:127] key;  
 output reg [0:127] fullkeys [round:0];
