@@ -10,7 +10,7 @@ z2
 cModel Technology
 dE:/Downloads/NCKU-Digital_IC_Design/Final/Final_P76124265/Q1
 vaddRoundKey
-Z0 !s110 1718373043
+Z0 !s110 1718376783
 !i10b 1
 !s100 Y442:mboTTnzHO6dZX8U]1
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,13 +20,13 @@ Z3 dE:/NCKU-Digital_IC_Design/HW5_P76124265/RTL
 w1718279455
 8E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/addRoundKey.v
 FE:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/addRoundKey.v
-!i122 1067
+!i122 1146
 L0 1 8
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1718373042.000000
+!s108 1718376782.000000
 !s107 E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/addRoundKey.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/addRoundKey.v|
 !i113 1
@@ -60,21 +60,21 @@ nadd@round@key_tb
 vAES
 R0
 !i10b 1
-!s100 HM0]>j?ggo_0LJ:UNFeTc0
+!s100 MIii:dnYa:68i?W7YkM2U3
 R1
-IDAMNVzb4[L^_5z]b2W;C>0
+IQoe]Az[C?e?UOa>8B2h?U0
 R2
 R3
-w1718372831
+w1718376779
 8E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/AES.v
 FE:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/AES.v
-!i122 1068
-L0 5 46
+!i122 1147
+L0 5 54
 R4
 r1
 !s85 0
 31
-Z8 !s108 1718373043.000000
+Z8 !s108 1718376783.000000
 !s107 E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/AES.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/AES.v|
 !i113 1
@@ -106,7 +106,7 @@ R5
 R6
 n@a@e@s_@encrypt
 vencryptRound
-R0
+Z9 !s110 1718376784
 !i10b 1
 !s100 ^R:6TMTchh^lLNn4UeUDK2
 R1
@@ -116,7 +116,7 @@ R3
 w1718279506
 8E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/encryptRound.v
 FE:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/encryptRound.v
-!i122 1069
+!i122 1148
 L0 1 15
 R4
 r1
@@ -130,7 +130,7 @@ R5
 R6
 nencrypt@round
 vkeyExpansion
-Z9 !s110 1718373044
+R9
 !i10b 1
 !s100 >DZY0G<gLkB:bCA3MQn3H3
 R1
@@ -140,13 +140,13 @@ R3
 w1718282299
 8E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/keyExpansion.v
 FE:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/keyExpansion.v
-!i122 1070
+!i122 1149
 L0 1 324
 R4
 r1
 !s85 0
 31
-Z10 !s108 1718373044.000000
+Z10 !s108 1718376784.000000
 !s107 E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/keyExpansion.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/keyExpansion.v|
 !i113 1
@@ -188,7 +188,7 @@ R3
 w1718279482
 8E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/lastEncryptRound.v
 FE:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/lastEncryptRound.v
-!i122 1071
+!i122 1150
 Z11 L0 1 13
 R4
 r1
@@ -202,7 +202,7 @@ R5
 R6
 nlast@encrypt@round
 vmixColumns
-Z12 !s110 1718373045
+Z12 !s110 1718376785
 !i10b 1
 !s100 dS7D[<:zQOfF=3XLZKk^m2
 R1
@@ -212,7 +212,7 @@ R3
 w1718280019
 8E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/mixColumns.v
 FE:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/mixColumns.v
-!i122 1072
+!i122 1151
 L0 1 38
 R4
 r1
@@ -307,13 +307,13 @@ R3
 Z16 w1718278906
 8E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/sbox.v
 FE:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/sbox.v
-!i122 1073
+!i122 1152
 L0 1 266
 R4
 r1
 !s85 0
 31
-Z17 !s108 1718373045.000000
+Z17 !s108 1718376785.000000
 !s107 E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/sbox.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/sbox.v|
 !i113 1
@@ -330,7 +330,7 @@ R3
 R16
 8E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/shiftRows.v
 FE:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/shiftRows.v
-!i122 1074
+!i122 1153
 L0 1 28
 R4
 r1
@@ -368,7 +368,7 @@ R5
 R6
 nshift@rows_tb
 vsubBytes
-Z18 !s110 1718373046
+Z18 !s110 1718376786
 !i10b 1
 !s100 [bEmk3C_[:`YQB;Y=QfX30
 R1
@@ -378,13 +378,13 @@ R3
 w1718279986
 8E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/subBytes.v
 FE:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/subBytes.v
-!i122 1075
+!i122 1154
 R11
 R4
 r1
 !s85 0
 31
-Z19 !s108 1718373046.000000
+R17
 !s107 E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/subBytes.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/subBytes.v|
 !i113 1
@@ -426,13 +426,13 @@ R3
 R16
 8E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/tb.v
 FE:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/tb.v
-!i122 1076
+!i122 1155
 L0 5 97
 R4
 r1
 !s85 0
 31
-R19
+!s108 1718376786.000000
 !s107 E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/NCKU-Digital_IC_Design/HW5_P76124265/RTL/tb.v|
 !i113 1
