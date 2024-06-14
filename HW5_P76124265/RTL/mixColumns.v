@@ -27,7 +27,7 @@ genvar i;
 
 generate 
 //MixColumns() can be written as a matrix multiplication in GF(2^8).
-for(i = 0; i < 4; i = i + 1) begin 
+for(i = 0; i < 4; i = i + 1) begin :maxColumns_loop
     assign out[(i*32) + 24 +: 8] = mb2(in[(i*32) + 24 +: 8]) ^ mb3(in[(i*32) + 16 +: 8]) ^ in[(i*32) + 8 +: 8] ^ in[i*32 +: 8];
     assign out[(i*32) + 16 +: 8] = in[(i*32) + 24 +: 8] ^ mb2(in[(i*32) + 16 +: 8]) ^ mb3(in[(i*32) + 8 +: 8]) ^ in[i*32 +: 8];
     assign out[(i*32) + 8 +: 8] = in[(i*32) + 24 +: 8] ^ in[(i*32) + 16 +: 8] ^ mb2(in[(i*32) + 8 +: 8]) ^ mb3(in[i*32 +: 8]);

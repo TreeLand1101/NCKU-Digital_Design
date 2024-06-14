@@ -1,28 +1,23 @@
-module keyExpansion (key, fullkeys);
-parameter round = 10;
-input [0:127] key;  
-output reg [0:127] fullkeys [round:0];
+module keyExpansion (oldKey, curRound, newKey);
+input [0:127] oldKey;  
+input [0:31] curRound;
+output reg [0:127] newKey;
 
 reg [0:31] temp;
 reg [0:31] afterRot; 
 reg [0:31] afterSubword;
 reg [0:31] roundRcon;
 
-integer i;
-
 always @(*) begin
-    fullkeys[0] = key;   
-    for (i = 1; i < round + 1; i = i + 1) begin
-        temp = fullkeys[i - 1][96:127]; 
-        afterRot = rotWord(temp); 
-        afterSubword = subWord(afterRot);
-        roundRcon = rcon(i); 
-        temp = afterSubword ^ roundRcon;
-        fullkeys[i][0:31] = fullkeys[i - 1][0:31] ^ temp;
-        fullkeys[i][32:63] = fullkeys[i - 1][32:63] ^ fullkeys[i][0:31];
-        fullkeys[i][64:95] = fullkeys[i - 1][64:95] ^ fullkeys[i][32:63]; 
-        fullkeys[i][96:127] = fullkeys[i - 1][96:127] ^ fullkeys[i][64:95]; 
-    end
+    temp = oldKey[96:127]; 
+    afterRot = rotWord(temp); 
+    afterSubword = subWord(afterRot);
+    roundRcon = rcon(curRound); 
+    temp = afterSubword ^ roundRcon;
+    newKey[0:31] = oldKey[0:31] ^ temp;
+    newKey[32:63] = oldKey[32:63] ^ newKey[0:31];
+    newKey[64:95] = oldKey[64:95] ^ newKey[32:63]; 
+    newKey[96:127] = oldKey[96:127] ^ newKey[64:95]; 
 end
 
 
