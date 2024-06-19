@@ -4,20 +4,13 @@ input [0:31] curRound;
 output reg [0:127] newKey;
 
 reg [0:31] temp;
-reg [0:31] afterRot; 
-reg [0:31] afterSubword;
-reg [0:31] roundRcon;
 
 always @(*) begin
-    temp = oldKey[96:127]; 
-    afterRot = rotWord(temp); 
-    afterSubword = subWord(afterRot);
-    roundRcon = rcon(curRound); 
-    temp = afterSubword ^ roundRcon;
+    temp = subWord(rotWord(oldKey[96:127])) ^ rcon(curRound);
     newKey[0:31] = oldKey[0:31] ^ temp;
-    newKey[32:63] = oldKey[32:63] ^ newKey[0:31];
-    newKey[64:95] = oldKey[64:95] ^ newKey[32:63]; 
-    newKey[96:127] = oldKey[96:127] ^ newKey[64:95]; 
+    newKey[32:63] = oldKey[32:63] ^ oldKey[0:31] ^ temp;
+    newKey[64:95] = oldKey[64:95] ^ oldKey[32:63] ^ oldKey[0:31] ^ temp;
+    newKey[96:127] = oldKey[96:127] ^ oldKey[64:95] ^ oldKey[32:63] ^ oldKey[0:31] ^ temp;
 end
 
 
